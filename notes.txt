@@ -21,7 +21,7 @@ sudo service apache2 restart
 
 - nano /etc/hosts (ubutnu server)
     a.com 139.134.200.3 (the server ip)
-    b.com 39.134.200.3
+    b.com 139.134.200.3
 -sudo apt install certbot python3-certbot-apache -y
 - certbot --apache
 -systemctl restart apache2 
