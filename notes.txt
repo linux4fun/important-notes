@@ -1,0 +1,29 @@
+
+
+######### apache2 fix error 404 #############
+
+-   permitions
+-   .htaccess
+
+######### apache2 permalink wordpress error #############
+
+nano -l  /etc/apache2/apache2.conf
+go into line 170 and change  AllowOverride to  All
+
+sudo a2enmod rewrite
+sudo service apache2 restart
+
+
+######### how to set up  multiple sites in same vps server (apache2) #############
+
+
+- sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+
+- nano /etc/hosts (ubutnu server)
+    a.com 139.134.200.3 (the server ip)
+    b.com 39.134.200.3
+-sudo apt install certbot python3-certbot-apache -y
+- certbot --apache
+-systemctl restart apache2 
+
+
