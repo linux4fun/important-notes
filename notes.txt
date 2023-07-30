@@ -27,3 +27,26 @@ sudo service apache2 restart
 -systemctl restart apache2 
 
 ################ gpg tricks ###############################
+
+gpg --full-gen-key          // generate gpg keys 
+gpg --export --armor > pub.pub    
+gpg --export-secret-keys > private.asc
+
+gpg --import pub.pub  // importing public key 
+gpg --import private.asc // importing private key
+add you message in test.txt 
+gpg -r ahmed@linux4fun.org -e test.txt  // -r recepiant email (important) -e for encrypting the message in test.txt  
+gpg -d test.txt  // used to  dycrept the encrypted test.txt
+
+gpg --list-keys  // show list keys 
+
+
+
+echo "hello" | gpg --clear-sign --local-user <key-id-or-fingerprint> // somthing like 'D6BA9423021A0839CCC6F3C8C61D429110B625A1'
+
+echo "hello" | gpg --clear-sign --local-user D6BA9423021A0839CCC6F3C8C61D429110B625A1
+
+
+
+
+
