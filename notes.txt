@@ -26,4 +26,4 @@ sudo service apache2 restart
 - certbot --apache
 -systemctl restart apache2 
 
-
+################ gpg tricks ###############################
